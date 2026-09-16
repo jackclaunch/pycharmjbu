@@ -1,16 +1,22 @@
-myDictionary = {"name1": "Justus",
-                "name2": "Jim",
-                "name3": "Joe"
-                }
-print(myDictionary)
+mycourses = {"c_name1": "OOP",
+             "c_name2": "Calculus",
+             "c_name3": "Old Testament Survey"
+             }
+courseTotal = 3
+while True:
+    print(mycourses)
+    userInput = input("1. Add a course\n2. Remove a course\n3. Replace a course\n4. Print courses\n5. Exit\n")
+    if userInput == "1":
+        courseTotal = courseTotal + 1
+        mycourses.update({f"c_name{courseTotal}": input("Input the course: ")})
 
-myDictionary.update({"name4": "Jemi",
-                     "name5": "Jack"})
+    elif userInput == "2":
+        del mycourses[input("Input the course (c_name(class#): ")]
 
-del myDictionary["name2"]
-del myDictionary["name3"]
+    elif userInput == "3":
 
-myDictionary.update({"name4": "Jim",})
-#OR
-myDictionary["name4"] = "Melba"
-print(myDictionary)
+        mycourses[f"c_name{input("Class # you would like to replace")}"] = input("Input the new course: ")
+    elif userInput == "4":
+        print(mycourses)
+    elif userInput == "5":
+        break
