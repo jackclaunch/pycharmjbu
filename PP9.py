@@ -39,7 +39,7 @@ while True:
                      "3": "year",
                      "4": "gpa"}
 
-        students["s"+ editStudent]["name"] = input("new " + editInput[userEditInput] + ": ")
+        students["s"+ editStudent][editInput[userEditInput]] = input("new " + editInput[userEditInput] + ": ")
 
 
     elif userInput == "4":
