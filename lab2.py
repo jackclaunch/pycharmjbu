@@ -89,7 +89,8 @@ def modifyEmployee():
 def printEmployees():
     userInput = input("1. Print all employees\n2. Print specific employee\n")
     if userInput == "1":
-        print(myEmployees)
+        for employeeInfo in myEmployees.items():
+            print(employeeInfo)
     elif userInput == "2":
         idInput = input("ID of employee to print: ")
         print(myEmployees[f"e{idInput}"])
